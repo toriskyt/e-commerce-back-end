@@ -5,10 +5,6 @@ const Tag = require('./Tag');
 const ProductTag = require('./ProductTag');
 const router = require('../routes');
 
-router.use('/product', productRoutes);
-router.use('/category', categoryRoutes);
-router.use('/tag', tagRoutes);
-router.use('/productTag', productTagRoutes);
 
 // Products belongsTo Category
 
