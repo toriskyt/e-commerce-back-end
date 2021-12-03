@@ -3,6 +3,8 @@ const { Category, Product, Tag } = require('../../models');
 
 // The `/api/categories` endpoint
 
+// find all categories
+// be sure to include its associated Product data
 router.get('/', (req, res) => {
   Category.findAll().then(categoryData => 
     res.status(200).json(categoryData))
