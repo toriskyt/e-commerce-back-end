@@ -8,12 +8,6 @@ router.get('/', (req, res) => {
     res.status(200).json(categoryData))
     .catch(err => 
       res.status(500).json(err))
-  // try {
-  //   const categoryData = await Category.findAll();
-  //   res.status(200).json(categoryData);
-  // } catch (err) {
-  //   res.status(500).json(err);
-  // }
 });
 // find one category by its `id` value
 // be sure to include its associated Products
