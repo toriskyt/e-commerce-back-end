@@ -26,9 +26,6 @@ router.get('/:id', async (req, res) => {
         res.json(err)
         console.log(err)
       }
-      // if (!tagData) {
-      //   res.status(404).json({message: "No tag found with this id!"})
-      // }
 });
  
 
@@ -54,9 +51,10 @@ router.delete('/:id', async (req, res) => {
     const tagData = await Tag.destroy({
      where: {
        id: req.params.id
-     } 
-     res.status(200).json(tagData);
+     },
+    
     })
+      res.status(200).json(tagData);
   }
   catch (err) {
     res.json(err);
